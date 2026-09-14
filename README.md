@@ -17,7 +17,7 @@ Ontwerp en keuzes: `docs/superpowers/specs/2026-09-14-signature-v2-design.md`.
    - **Outlook (Mac/web)**: Instellingen, Handtekeningen, nieuwe handtekening, plakken. Outlook kent Inter en JetBrains Mono niet en valt terug op Helvetica en Menlo, dat is bedoeld.
 4. Stuur jezelf een testmail en controleer dat de knop "Nu starten" op één regel staat en de iconen zichtbaar zijn.
 
-De afbeeldingen (logo, iconen) worden geladen van `raw.githubusercontent.com` uit deze repo. De profielfoto komt van Slack: verander je je Slack-profielfoto, dan verandert de handtekening mee.
+De afbeeldingen (zwarte kaart, iconen) worden geladen van `raw.githubusercontent.com` uit deze repo. De zwarte kaart is bewust één afbeelding: mailclients in dark mode (Apple Mail voorop) keren alle kleuren om, maar laten afbeeldingen staan. Zo blijft de kaart in elk thema zwart met wit logo. De profielfoto komt van Slack: verander je je Slack-profielfoto, dan verandert de handtekening mee.
 
 ## Nieuwe collega toevoegen of gegevens wijzigen
 
@@ -28,6 +28,17 @@ Bewerk nooit `v2/<naam>.html` direct, die bestanden worden gegenereerd.
 3. Commit en push. De bestanden werken pas als ze op `main` staan.
 
 De Slack-foto-URL vind je via je Slack-profiel: klik op je foto, "Openen in browser", kopieer de URL.
+
+## Kaart wijzigen (tagline, stats, knop)
+
+De zwarte kaart komt uit `v2/assets/plate.html`. Na een wijziging daarin de PNG opnieuw renderen:
+
+```bash
+npm install playwright && npx playwright install chromium   # eenmalig
+node v2/render-plate.mjs
+```
+
+Commit `plate.html` en `plate.png` samen. De acht handtekeningen hoeven niet opnieuw gegenereerd te worden zolang de afmeting 520 x 184 blijft; verandert die, pas dan `width`/`height` van de kaart in `v2/template.html` aan en draai `generate.py`.
 
 ## Template wijzigen
 

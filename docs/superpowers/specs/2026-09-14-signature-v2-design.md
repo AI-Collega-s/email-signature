@@ -22,6 +22,13 @@ Gekozen via de visual companion op 2026-09-14 (schermen in
 - Foto-URL's blijven de Slack-URL's die nu in v1 staan. Verandert iemand zijn
   Slack-profielfoto, dan verandert de handtekening mee.
 - Stats blijven 50+, 85%, 40u, 98%.
+- Dark mode (besluit 2026-09-14, na test in Apple Mail): de ink-kaart moet in elk
+  thema zwart blijven. Apple Mail keert elke CSS-kleur om en laat alleen
+  afbeeldingen staan, daarom is de kaart één PNG (`v2/assets/plate.png`, 520 x
+  184 px op 2x) met één link naar aicollegas.nl/contact. Naam, functie en
+  contactregel blijven tekst en mogen omkeren. Iconen zijn middengrijs
+  `#8A8A8A` op 100% dekking, zodat ze zichtbaar zijn op licht én donker, ook in
+  clients die alleen de achtergrond donker maken (Outlook, Gmail mobiel).
 
 ## Specificatie
 
@@ -63,10 +70,11 @@ Vormen
 
 Afbeeldingen (alle via `https://raw.githubusercontent.com/AI-Collega-s/email-signature/main/v2/assets/...`)
 
-- `logo-dark.png`: lockup voor op ink, uit `aicollegas-design-system/assets/png/logo-dark.png`,
-  geschaald naar 2x weergavehoogte (44 px hoog), weergegeven op 22 px.
+- `plate.png`: de complete ink-kaart (logo, tagline, knop, stats) op 2x, 1040 x 368 px,
+  weergegeven op 520 x 184. Bron: `plate.html`, renderen met `v2/render-plate.mjs`.
+- `logo-dark.png`: lockup op ink, 44 px hoog (2x), alleen gebruikt door `plate.html`.
 - `icons/icon_email.png`, `icon_phone.png`, `icon_globe.png`, `icon_linkedin.png`:
-  28 x 28 px PNG (2x), weergegeven op 14 px, ink op 55% dekking.
+  28 x 28 px PNG (2x), weergegeven op 14 px, `#8A8A8A` op 100% dekking.
 
 Links: `mailto:`, `tel:`, `https://aicollegas.nl`, LinkedIn-profiel, knop naar
 `https://aicollegas.nl/contact`.
@@ -78,9 +86,12 @@ email-signature/
 ├── v1/                     huidige HTML-bestanden, ongewijzigd (archief)
 ├── v2/
 │   ├── template.html       template met <!-- ... aanpassen! --> markers
+│   ├── generate.py         genereert de acht bestanden uit de template
+│   ├── render-plate.mjs    rendert assets/plate.html naar assets/plate.png
 │   ├── aaron.html, david.html, jacco.html, jasper.html,
 │   │   lars.html, maarten.html, max.html, niels.html
 │   └── assets/
+│       ├── plate.html, plate.png
 │       ├── logo-dark.png
 │       └── icons/
 ├── icons/                  blijft in de root: v1-handtekeningen in mailclients verwijzen hierheen
@@ -102,8 +113,10 @@ aparte, latere beslissing.
 - Per persoon worden naam, functie, e-mail, telefoon, LinkedIn en foto-URL
   overgenomen uit het v1-bestand. Voor Lars gelden de niet-gecommitte
   wijzigingen (Slack-foto, LinkedIn `lars-nelissen`).
-- CTA-pijl: `Nu&nbsp;starten&nbsp;&rarr;` met `white-space:nowrap`, zoals de
-  fix in v1 voor Apple Mail.
+- De kaart is een afbeelding; de CTA-tekst en het logo zitten daarin. Tekst
+  van de kaart staat in het `alt`-attribuut.
+- Geen `margin` op tabellen (onbetrouwbaar in mail), afstand via `padding` op
+  cellen.
 
 ## Verificatie
 
