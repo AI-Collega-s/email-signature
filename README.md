@@ -15,7 +15,7 @@ Ontwerp en keuzes: `docs/superpowers/specs/2026-09-14-signature-v2-design.md`.
    - **Apple Mail**: Instellingen, Handtekeningen, nieuwe handtekening, plakken. Zet "Kies altijd mijn standaardlettertype" uit.
    - **Gmail (web)**: Instellingen, Alle instellingen, Handtekening, nieuwe handtekening, plakken.
    - **Outlook (Mac/web)**: Instellingen, Handtekeningen, nieuwe handtekening, plakken. Outlook kent Inter en JetBrains Mono niet en valt terug op Helvetica en Menlo, dat is bedoeld.
-4. Stuur jezelf een testmail en controleer dat de knop "Nu starten" op één regel staat en de iconen zichtbaar zijn.
+4. Stuur jezelf een testmail en controleer dat de zwarte kaart en de iconen zichtbaar zijn, ook in dark mode.
 
 De afbeeldingen (zwarte kaart, iconen) worden geladen van `raw.githubusercontent.com` uit deze repo. De zwarte kaart is bewust één afbeelding: mailclients in dark mode (Apple Mail voorop) keren alle kleuren om, maar laten afbeeldingen staan. Zo blijft de kaart in elk thema zwart met wit logo. De profielfoto komt van Slack: verander je je Slack-profielfoto, dan verandert de handtekening mee.
 
