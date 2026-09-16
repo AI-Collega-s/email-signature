@@ -11,7 +11,7 @@ HERE = Path(__file__).parent
 
 PERSONEN = [
     # bestand, foto-URL, naam, functie, e-mail, LinkedIn-URL, LinkedIn-tag, tel-href, tel-tekst (None = geen nummer)
-    ("jacco", "https://ca.slack-edge.com/T08LLV5FSUW-U08MGDQ902U-b9e64a863500-192", "Jacco Boonstra", "Sales Lead", "jacco@aicollegas.nl", "https://www.linkedin.com/in/jacco-boonstra-50114414a/", "@jacco-boonstra", "+31634222965", "+31 6 3422 2965"),
+    ("jacco", "https://ca.slack-edge.com/T08LLV5FSUW-U08MGDQ902U-b9e64a863500-192", "Jacco Boonstra", "Mede-oprichter", "jacco@aicollegas.nl", "https://www.linkedin.com/in/jacco-boonstra-50114414a/", "@jacco-boonstra", "+31634222965", "+31 6 3422 2965"),
     ("jasper", "https://ca.slack-edge.com/T08LLV5FSUW-U0BTR93K36H-4d198e80467f-192", "Jasper van Til", "Business Development Representative", "jasper@aicollegas.nl", "https://www.linkedin.com/in/jasper-van-til-41b347291/", "@jasper-van-til", "+31642392164", "+31 6 4239 2164"),
     ("lars", "https://ca.slack-edge.com/T08LLV5FSUW-U0AJRU74QFJ-10552f7c1e45-512", "Lars Nelissen", "AI Software Architect / Developer", "lars@aicollegas.nl", "https://linkedin.com/in/lars-nelissen", "@lars-nelissen", "+31648623550", "+31 6 4862 3550"),
     ("maarten", "https://ca.slack-edge.com/T08LLV5FSUW-U08LW4XPRM2-22a636418de9-192", "Maarten van Milligen", "AI Strategy Lead", "maarten@aicollegas.nl", "https://www.linkedin.com/in/maarten-van-milligen-993840162/", "@maarten-van-milligen", "+31621343266", "+31 6 2134 3266"),
